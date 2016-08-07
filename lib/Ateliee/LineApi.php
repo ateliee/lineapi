@@ -86,7 +86,7 @@ class LineApi
     {
         $path = 'profiles';
         $mids = is_array($mids) ? implode(',',$mids) : $mids;
-        $response = $this->api->request('GET', $path, ['mids' => $mids]);
+        $response = $this->api->request('GET', $path, ['query' => ['mids' => $mids]]);
         $result = json_decode((string) $response->getBody(), true);
 
         return $result;
