@@ -82,10 +82,11 @@ class LineApi
         return $result;
     }
 
-    public function getProfile(array $mids)
+    public function getProfile($mids)
     {
         $path = 'profiles';
-        $response = $this->api->request('GET', $path, ['mids' => implode(',',$mids)]);
+        $mids = is_array($mids) ? implode(',',$mids) : $mids;
+        $response = $this->api->request('GET', $path, ['mids' => $mids]);
         $result = json_decode((string) $response->getBody(), true);
 
         return $result;
