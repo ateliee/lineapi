@@ -1,5 +1,5 @@
 {
-  "name": "ateliee/linebot",
+  "name": "ateliee/lineapi",
   "require": {
     "guzzlehttp/guzzle": "6.2.0",
     "monolog/monolog": "1.18.2"

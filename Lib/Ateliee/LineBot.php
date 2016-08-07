@@ -6,7 +6,7 @@ use Monolog\Logger;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\ClientException;
 
-class LineBot
+class LineApi
 {
     const API_BASE_URL = 'https://trialbot-api.line.me/v1/';
     const TO_CHANNEL = 1383378250;
